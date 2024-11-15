@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <style>
+        .item-H {
+            grid-area: header;
+            height: 80px;
+        }
+
+        .item-L {
+            grid-area: lside;
+            height: 1100px;
+        }
+
+        .item-M {
+            grid-area: main;
+            height: 1100px;
+        }
+
+        .item-F {
+            grid-area: footer;
+            height: 60px;
+        }
+
+        .gridcontainer {
+            display: grid;
+            grid-template-areas:
+                'header header header header header'
+                'lside main main main main'
+                'footer footer footer footer footer';
+            background-color: #83c156;
+            grid-gap: 5px;
+            padding: 10px;
+        }
+
+        .item {
+            background-color: #f9f5c4;
+            border: 2px solid #629a40;
+            padding: 30px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .btn {
+            position: relative;
+            font-size: 17px;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 1em 2.5em;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 6em;
+            transition: all 0.2s;
+            border: none;
+            font-family: inherit;
+            font-weight: 500;
+            color: black;
+            background-color: #befa98;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn::after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            border-radius: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all 0.4s;
+        }
+
+        .btn::after {
+            background-color: #fff;
+        }
+
+        .btn:hover::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+
+        p {
+            color: black;
+        }
+        .block {
+            position: relative;
+            font-size: 17px;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 1em 2.5em;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 6em;
+            transition: all 0.2s;
+            border: none;
+            font-family: inherit;
+            font-weight: 500;
+            color: black;
+            background-color: #befa98;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gridcontainer">
+        <div class="item-H item"><img src="image/cauliheader.jpg" alt="header" style="width: 100%; height: 100px;">
+        </div>
+        <div class="item-L item"><Button class="btn"><a href="register.html" target="_blank" style="color: #629a40;">Sign
+                    up</a></Button> <br><br><br>
+                    <img src="image/veggie.png" alt="">
+                </div>
+        <div class="item-M item">
+            <p style="text-align: center; " class="block">&#128195;Menu
+                    List&#128195;</p>
+            <form action="https://httpbin.org/post" method="post">
+            <table style="width: 100%;">
+                <tr>
+                    <th><img style="width: 5cm;" src="image/1.png" alt="STTart">
+                        <p>Strawberry Tart</p>
+                        <label for="Dessert"></label>
+                        <select id="Dessert" name="STTart">
+                            <option value="0">none</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </th>
+                    <th><img style="width: 5cm;" src="image/2.png" alt="BBCake">
+                        <p>Bluberry Cake</p>
+                        <label for="Dessert"></label>
+                        <select id="Dessert" name="BBCake">
+                            <option value="0">none</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </th>
+                    </th>
+                    <th><img style="width: 5cm;" src="image/7.png" alt="CCLava">
+                        <p>Chocolate Cake Lava</p>
+                        <label for="Dessert"></label>
+                        <select id="Dessert" name="CCLava">
+                            <option value="0">none</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </th>
+                    </th>
+                </tr>
+                <tr>
+                    <th><img style="width: 5cm;" src="image/3.png" alt="BBcheesecake">
+                        <p>Bluberry CheeseCake</p>
+                        <label for="Dessert"></label>
+                        <select id="Dessert" name="BBcheesecake">
+                            <option value="0">none</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </th>
+                    </th>
+                    <th><img style="width: 5cm;" src="image/4.png" alt="BBMuffin">
+                        <p>Bluberry Muffin</p>
+                        <label for="Dessert"></label>
+                        <select id="Dessert" name="BBMuffin">
+                            <option value="0">none</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </th>
+                    </th>
+                    <th><img style="width: 5cm;" src="image/8.png" alt="Pancake">
+                        <p>Fairy Pancake</p>
+                        <label for="Dessert"></label>
+                        <select id="Dessert" name="Pancake">
+                            <option value="0">none</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </th>
+                    </th>
+                </tr>
+                <tr>
+                    <th><img style="width: 5cm;" src="image/5.png" alt="CCCake">
+                        <p>Chocolate Cake</p>
+                        <label for="Dessert"></label>
+                        <select id="Dessert" name="CCCake">
+                            <option value="0">none</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </th>
+                    </th>
+                    <th><img style="width: 5cm;" src="image/6.png" alt="STCake">
+                        <p>Strawberry Cake</p>
+                        <label for="Dessert"></label>
+                        <select id="Dessert" name="STCake">
+                            <option value="0">none</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </th>
+                    </th>
+                    <th><img style="width: 5cm;" src="image/9.png" alt="Chouxcream">
+                        <p>Chouxcream</p>
+                        <label for="Dessert"></label>
+                        <select id="Dessert" name="Chouxcream">
+                            <option value="0">none</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </th>
+                    </th>
+                </tr>
+            </table>
+            <br><br>
+            <button class="btn"><input type="submit" value="ยืนยันการสั่งสิ้นค้า"></button>
+        </form>
+        </div>
+        <div class="item-F item">
+            <address>
+                101 ถนน ไชเท้า แขวง ไชโป๊ จังหวัด โป๊ยกั๊ก 13160 <br>
+                Tel. 0655622974 <br>
+                Facebook : Cauliflour_inwzaa007
+            </address>
+        </div>
+    </div>
+</body>
+
+</html>

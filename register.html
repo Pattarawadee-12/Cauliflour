@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register page</title>
+    <style>
+        .item-H {
+            grid-area: header;
+            height: 80px;
+        }
+
+        .item-L {
+            grid-area: lside;
+            height: 750px;
+        }
+
+        .item-M {
+            grid-area: main;
+            height: 750px;
+        }
+
+        .item-F {
+            grid-area: footer;
+            height: 60px;
+        }
+
+        .gridcontainer {
+            display: grid;
+            grid-template-areas:
+                'header header header header header'
+                'lside main main main main'
+                'footer footer footer footer footer';
+            background-color: #83c156;
+            grid-gap: 5px;
+            padding: 10px;
+        }
+
+        .item {
+            background-color: #f9f5c4;
+            border: 2px solid #629a40;
+            padding: 30px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .btn {
+            position: relative;
+            font-size: 17px;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 1em 2.5em;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 6em;
+            transition: all 0.2s;
+            border: none;
+            font-family: inherit;
+            font-weight: 500;
+            color: black;
+            background-color: #befa98;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn::after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            border-radius: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all 0.4s;
+        }
+
+        .btn::after {
+            background-color: #fff;
+        }
+
+        .btn:hover::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+
+        p {
+            color: #629a40;
+        }
+
+        .block {
+            position: relative;
+            font-size: 17px;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 1em 2.5em;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 6em;
+            transition: all 0.2s;
+            border: none;
+            font-family: inherit;
+            font-weight: 500;
+            color: black;
+            background-color: #befa98;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .form_area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #befa98;
+            height: auto;
+            width: auto;
+            border: 2px solid #264143;
+            border-radius: 20px;
+            box-shadow: 3px 4px 0px 1px #5c794a;
+        }
+        .form_group {
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            margin: 10px;
+        }
+
+        .form_style {
+            outline: none;
+            border: 2px solid #264143;
+            box-shadow: 3px 4px 0px 1px #5c794a;
+            width: 290px;
+            padding: 12px 10px;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+
+        .form_style:focus,
+
+        .btn1:focus {
+            transform: translateY(4px);
+            box-shadow: 1px 2px 0px 0px #355124;
+        }
+
+        .btn1 {
+            padding: 15px;
+            margin: 50px 50px;
+            width: 200px;
+            font-size: 15px;
+            background: #629a40;
+            border-radius: 10px;
+            font-weight: 800;
+            box-shadow: 3px 3px 0px 0px #355124;
+        }
+
+        .btn1:hover {
+            opacity: .9;
+        }
+
+        .link {
+            font-weight: 800;
+            color: #264143;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gridcontainer">
+        <div class="item-H item"><img src="image/cauliheader.jpg" alt="header" style="width: 100%; height: 100px;">
+        </div>
+        <div class="item-L item"><Button class="btn"><a href="index.html" target="_blank"
+                    style="color: #629a40;">Homepage</a></Button> <br><br><br>
+                    <img src="image/veggie_regester.png" alt="Grafic">
+                </div>
+        <div class="item-M item container">
+            <h2 class="block"><b>Let's Register &#9829;</b></h2>
+            <form class="form_area form_group form_style" action="https://httpbin.org/post" method="post">
+                <label for="Firstname">&#9829;firstname</label>
+                <input type="text" id="Firstname" name="user_name"><br>
+                <label for="Lastname">&#9829;lastname</label>
+                <input type="text" id="Lastname" name="user_surname"><br>
+                <label for="Email">&#9829;E-mail</label>
+                <input type="email" id="email" name="email_address"><br>
+                <label for="Telephone">&#9829; Tel. number</label>
+                <input type="text" id="Telephone" name="user_Tel"><br>
+                <label for="Birthday">&#9829;Birthday</label>
+                <input type="date" id="Birthday" name="user_Bday"><br>
+                <label for="Sex">&#9829;Sex</label>
+                <select name="user_sex" id="Sex">
+                    <option value="Prefer_not_to_say">Prefer not to say</option>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                </select><br>
+                <label for="Address">&#9829;Address</label>
+                <textarea name="user_address" id="address" rows="5" cols="25">your address</textarea>
+                <br><button class="btn1"><input class="link" type="submit" value="Sign Up"></button>
+            </form>
+        </div>
+        <div class="item-F item">
+            <address>
+                101 ถนน ไชเท้า แขวง ไชโป๊ จังหวัด โป๊ยกั๊ก 13160 <br>
+                Tel. 0655622974 <br>
+                Facebook : Cauliflour_inwzaa007
+            </address>
+        </div>
+    </div>
+</body>
+
+</html>
