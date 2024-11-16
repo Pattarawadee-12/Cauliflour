@@ -45,56 +45,6 @@
             font-size: 20px;
             text-align: center;
         }
-
-        .btn {
-            position: relative;
-            font-size: 17px;
-            text-transform: uppercase;
-            text-decoration: none;
-            padding: 1em 2.5em;
-            display: inline-block;
-            cursor: pointer;
-            border-radius: 6em;
-            transition: all 0.2s;
-            border: none;
-            font-family: inherit;
-            font-weight: 500;
-            color: black;
-            background-color: #befa98;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn:active {
-            transform: translateY(-1px);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn::after {
-            content: "";
-            display: inline-block;
-            height: 100%;
-            width: 100%;
-            border-radius: 100px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            transition: all 0.4s;
-        }
-
-        .btn::after {
-            background-color: #fff;
-        }
-
-        .btn:hover::after {
-            transform: scaleX(1.4) scaleY(1.6);
-            opacity: 0;
-        }
-
         p {
             color: black;
         }
@@ -114,7 +64,9 @@
             color: black;
             background-color: #befa98;
         }
+        mark{background-color: white;}
     </style>
+    <link rel="stylesheet" href="button.css">
 </head>
 
 <body>
@@ -132,7 +84,7 @@
             <table style="width: 100%;">
                 <tr>
                     <th><img style="width: 5cm;" src="image/1.png" alt="STTart">
-                        <p>Strawberry Tart</p>
+                        <p>Strawberry Tart <mark>49 baht</mark></p>
                         <label for="Dessert"></label>
                         <select id="Dessert" name="STTart">
                             <option value="0">none</option>
@@ -144,7 +96,7 @@
                         </select>
                     </th>
                     <th><img style="width: 5cm;" src="image/2.png" alt="BBCake">
-                        <p>Bluberry Cake</p>
+                        <p>Bluberry Cake <mark>59 baht</mark></p>
                         <label for="Dessert"></label>
                         <select id="Dessert" name="BBCake">
                             <option value="0">none</option>
@@ -157,7 +109,7 @@
                     </th>
                     </th>
                     <th><img style="width: 5cm;" src="image/7.png" alt="CCLava">
-                        <p>Chocolate Cake Lava</p>
+                        <p>Chocolate Cake Lava <mark>69 baht</mark></p>
                         <label for="Dessert"></label>
                         <select id="Dessert" name="CCLava">
                             <option value="0">none</option>
@@ -172,7 +124,7 @@
                 </tr>
                 <tr>
                     <th><img style="width: 5cm;" src="image/3.png" alt="BBcheesecake">
-                        <p>Bluberry CheeseCake</p>
+                        <p>Bluberry CheeseCake <mark>59 baht</mark></p>
                         <label for="Dessert"></label>
                         <select id="Dessert" name="BBcheesecake">
                             <option value="0">none</option>
@@ -185,7 +137,7 @@
                     </th>
                     </th>
                     <th><img style="width: 5cm;" src="image/4.png" alt="BBMuffin">
-                        <p>Bluberry Muffin</p>
+                        <p>Bluberry Muffin <mark>39 baht</mark></p>
                         <label for="Dessert"></label>
                         <select id="Dessert" name="BBMuffin">
                             <option value="0">none</option>
@@ -198,7 +150,7 @@
                     </th>
                     </th>
                     <th><img style="width: 5cm;" src="image/8.png" alt="Pancake">
-                        <p>Fairy Pancake</p>
+                        <p>Fairy Pancake <mark>49 baht</mark></p>
                         <label for="Dessert"></label>
                         <select id="Dessert" name="Pancake">
                             <option value="0">none</option>
@@ -213,7 +165,7 @@
                 </tr>
                 <tr>
                     <th><img style="width: 5cm;" src="image/5.png" alt="CCCake">
-                        <p>Chocolate Cake</p>
+                        <p>Chocolate Cake <mark>59 baht</mark></p>
                         <label for="Dessert"></label>
                         <select id="Dessert" name="CCCake">
                             <option value="0">none</option>
@@ -226,7 +178,7 @@
                     </th>
                     </th>
                     <th><img style="width: 5cm;" src="image/6.png" alt="STCake">
-                        <p>Strawberry Cake</p>
+                        <p>Strawberry Cake <mark>59 baht</mark></p>
                         <label for="Dessert"></label>
                         <select id="Dessert" name="STCake">
                             <option value="0">none</option>
@@ -239,7 +191,7 @@
                     </th>
                     </th>
                     <th><img style="width: 5cm;" src="image/9.png" alt="Chouxcream">
-                        <p>Chouxcream</p>
+                        <p>Chouxcream <mark>39 baht</mark></p>
                         <label for="Dessert"></label>
                         <select id="Dessert" name="Chouxcream">
                             <option value="0">none</option>
